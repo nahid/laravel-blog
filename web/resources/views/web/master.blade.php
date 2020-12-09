@@ -3,7 +3,7 @@
 <head>
     <meta name="generator" content="Hugo 0.51">
     <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ink - Crisp, minimal personal [blog theme for Hugo](https://github.com/knadh/hugo-ink) </title>
+    <title>Nahid | The Alien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Ink">
     <meta itemprop="name" content="Ink">
@@ -17,57 +17,22 @@
     <meta name="twitter:title" content="Ink">
     <meta name="twitter:description" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/css-normalize.css') }}">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/css-main.css') }}">
-    <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ asset('css/css-dark.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.ico') }}" />
 
-    <script src="{{ asset('js/dist-feather.min.js') }}"></script>
-    <script src="{{ asset('js/js-main.js') }}"></script>
+@include('web.partials.styles')
+
 </head>
 <body>
     <div class="container wrapper">
-        <div class="header">
-
-            <div class="avatar">
-                <a href="hugo-ink.netlify.html">
-                    <img src="images/free-vector-young-man-head-with-beard-avatar-character_24877-36786.jpg" alt="Ink"></a>
-            </div>
-
-            <h1 class="site-title"><a href="hugo-ink.netlify.html">NAH!D BIN AZHAR</a></h1>
-            <div class="site-description">
-                <p>Open Source Enthusiast, Code Artisan & Traveler</p>
-                <nav class="nav social">
-                    <ul class="flat">
-                        <li><a href="https://github.com/knadh/hugo-ink" title="Github"><i data-feather="github"></i></a></li>
-                        <li><a href="index.html" title="RSS"><i data-feather="rss"></i></a></li>
-                    </ul>
-                </nav>
-                <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></span>
-            </div>
-
-            <nav class="nav"><ul class="flat"><li>
-                        <a href="hugo-ink.netlify.html">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="posts.html">All posts</a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-
-                    <li>
-                        <a href="tags.html">Tags</a>
-                    </li>
-
-                </ul></nav></div>
+        @include('web.partials.header')
 
 
         <div class="recent-posts section">
             <div class="posts">
 
+                <x-posts.post title="Hello World" link="https://fb.me/to.nahid" time="2020-12-10">
+                    Something new
+                </x-posts.post>
 
 
                 <div class="post">
@@ -176,23 +141,14 @@
                     </div>
                 </div>
 
-
-
-                <ul class="pagination"><li class="page-item page-prev">
-
-                    </li>
-                    <li class="page-item page-next">
-
-                        <a href="2.html" class="page-link" aria-label="Next"><span aria-hidden="true">Next page &rarr;</span></a>
-
-                    </li>
-                </ul></div>
+                <x-page.paginate next="http://localhost:8800/view?page=1" />
+            </div>
         </div>
     </div>
-    <div class="footer wrapper">
-        <nav class="nav"><div>2020  &copy; Copyright notice |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-        </nav></div>
 
+@include('web.partials.footer')
+
+@include('web.partials.scripts')
 
     <script type="application/javascript">
     var doNotTrack = false;
