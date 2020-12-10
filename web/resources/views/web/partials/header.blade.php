@@ -2,7 +2,8 @@
 
     <div class="avatar">
         <a href="hugo-ink.netlify.html">
-            <img src="{{ asset('logo.png') }}" alt="Ink"></a>
+            <img src="{{ asset('logo.png') }}" alt="Ink">
+        </a>
     </div>
 
     <h1 class="site-title"><a href="hugo-ink.netlify.html">NAH!D BIN AZHAR</a></h1>
@@ -15,10 +16,14 @@
                 <li><a href="https://twitter.com/NahidBinAzhar" title="facebook"><i data-feather="twitter"></i></a></li>
             </ul>
         </nav>
-        <span class="scheme-toggle"><a href="#" id="scheme-toggle" class="light"></a></span>
+        <span class="scheme-toggle">
+            <a href="#" id="scheme-toggle" class="light"></a>
+        </span>
     </div>
 
-    <nav class="nav"><ul class="flat"><li>
+    <nav class="nav">
+        <ul class="flat">
+            <li>
                 <a href="hugo-ink.netlify.html">Home</a>
             </li>
 
@@ -34,4 +39,6 @@
                 <a href="tags.html">Tags</a>
             </li>
 
-        </ul></nav></div>
+        </ul>
+    </nav>
+</div>
