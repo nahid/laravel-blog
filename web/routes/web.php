@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/view', 'web.master');
+Route::view('/web', 'web.master');
+Route::view('/root', 'admin.layouts.master');
